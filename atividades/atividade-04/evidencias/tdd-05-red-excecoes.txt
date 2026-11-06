@@ -1,0 +1,37 @@
+============================= test session starts =============================
+platform win32 -- Python 3.15.2, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Mendes\Documents\Atividade4\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Mendes\Documents\Atividade4\atividades\atividade-04
+plugins: playwright-0.10.0
+collecting ... collected 8 items
+
+tests/test_regras_localeats.py::test_pedido_acima_do_minimo_e_aceito PASSED [ 12%]
+tests/test_regras_localeats.py::test_pedido_de_150_recebe_15_de_desconto PASSED [ 25%]
+tests/test_regras_localeats.py::test_pedido_abaixo_de_30_e_recusado PASSED [ 37%]
+tests/test_regras_localeats.py::test_pedido_abaixo_de_100_nao_recebe_desconto PASSED [ 50%]
+tests/test_regras_localeats.py::test_pedido_de_exatamente_30_e_aceito PASSED [ 62%]
+tests/test_regras_localeats.py::test_pedido_negativo_gera_erro FAILED    [ 75%]
+tests/test_regras_localeats.py::test_pedido_de_exatamente_100_recebe_10_de_desconto PASSED [ 87%]
+tests/test_regras_localeats.py::test_desconto_de_pedido_negativo_gera_erro FAILED [100%]
+
+================================== FAILURES ===================================
+_______________________ test_pedido_negativo_gera_erro ________________________
+
+    def test_pedido_negativo_gera_erro():
+>       with pytest.raises(ValueError, match="negativo"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+tests\test_regras_localeats.py:35: Failed
+_________________ test_desconto_de_pedido_negativo_gera_erro __________________
+
+    def test_desconto_de_pedido_negativo_gera_erro():
+>       with pytest.raises(ValueError, match="negativo"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+tests\test_regras_localeats.py:46: Failed
+=========================== short test summary info ===========================
+FAILED tests/test_regras_localeats.py::test_pedido_negativo_gera_erro - Faile...
+FAILED tests/test_regras_localeats.py::test_desconto_de_pedido_negativo_gera_erro
+========================= 2 failed, 6 passed in 0.20s =========================

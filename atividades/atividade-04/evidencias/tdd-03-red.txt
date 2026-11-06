@@ -1,0 +1,33 @@
+============================= test session starts =============================
+platform win32 -- Python 3.15.2, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Mendes\Documents\Atividade4\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Mendes\Documents\Atividade4\atividades\atividade-04
+plugins: playwright-0.10.0
+collecting ... collected 4 items
+
+tests/test_regras_localeats.py::test_pedido_acima_do_minimo_e_aceito PASSED [ 25%]
+tests/test_regras_localeats.py::test_pedido_de_150_recebe_15_de_desconto PASSED [ 50%]
+tests/test_regras_localeats.py::test_pedido_abaixo_de_30_e_recusado FAILED [ 75%]
+tests/test_regras_localeats.py::test_pedido_abaixo_de_100_nao_recebe_desconto FAILED [100%]
+
+================================== FAILURES ===================================
+_____________________ test_pedido_abaixo_de_30_e_recusado _____________________
+
+    def test_pedido_abaixo_de_30_e_recusado():
+>       assert pedido_atingiu_valor_minimo(29.99) is False
+E       assert True is False
+E        +  where True = pedido_atingiu_valor_minimo(29.99)
+
+tests\test_regras_localeats.py:18: AssertionError
+________________ test_pedido_abaixo_de_100_nao_recebe_desconto ________________
+
+    def test_pedido_abaixo_de_100_nao_recebe_desconto():
+>       assert calcular_desconto(99.99) == 0
+E       assert 9.999 == 0
+E        +  where 9.999 = calcular_desconto(99.99)
+
+tests\test_regras_localeats.py:23: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_regras_localeats.py::test_pedido_abaixo_de_30_e_recusado - ...
+FAILED tests/test_regras_localeats.py::test_pedido_abaixo_de_100_nao_recebe_desconto
+========================= 2 failed, 2 passed in 0.18s =========================

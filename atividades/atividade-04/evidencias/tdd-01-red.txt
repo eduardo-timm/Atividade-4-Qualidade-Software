@@ -1,0 +1,49 @@
+============================= test session starts =============================
+platform win32 -- Python 3.15.2, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Mendes\Documents\Atividade4\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Mendes\Documents\Atividade4\atividades\atividade-04
+plugins: playwright-0.10.0
+collecting ... collected 2 items
+
+tests/test_regras_localeats.py::test_pedido_acima_do_minimo_e_aceito FAILED [ 50%]
+tests/test_regras_localeats.py::test_pedido_de_150_recebe_15_de_desconto FAILED [100%]
+
+================================== FAILURES ===================================
+____________________ test_pedido_acima_do_minimo_e_aceito _____________________
+
+    def test_pedido_acima_do_minimo_e_aceito():
+>       assert pedido_atingiu_valor_minimo(50) is True
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_regras_localeats.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+valor_pedido = 50
+
+    def pedido_atingiu_valor_minimo(valor_pedido):
+        """Responsável: Eduardo Timm Mendes."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+src\regras_localeats.py:6: NotImplementedError
+__________________ test_pedido_de_150_recebe_15_de_desconto ___________________
+
+    def test_pedido_de_150_recebe_15_de_desconto():
+>       assert calcular_desconto(150) == 15
+               ^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_regras_localeats.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+valor_pedido = 150
+
+    def calcular_desconto(valor_pedido):
+        """Responsável: Tomas Madruga Flores."""
+>       raise NotImplementedError
+E       NotImplementedError
+
+src\regras_localeats.py:11: NotImplementedError
+=========================== short test summary info ===========================
+FAILED tests/test_regras_localeats.py::test_pedido_acima_do_minimo_e_aceito
+FAILED tests/test_regras_localeats.py::test_pedido_de_150_recebe_15_de_desconto
+============================== 2 failed in 0.22s ==============================
